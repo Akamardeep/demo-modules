@@ -10,7 +10,6 @@ pipeline {
             }
         }
         stage('Test') {
-            agent any
             steps {
                 sh 'node --version'
             }
