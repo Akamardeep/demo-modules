@@ -1,13 +1,13 @@
 pipeline {
     agent any
     stages {
-        // stage('Install Node.js') {
-        //     steps {
-        //         script {
-        //            echo "hello amardeep"
-        //         }
-        //     }
-        // }
+         stage('Install Node.js') {
+             steps {
+                 script {
+                    echo "hello amardeep"
+                 }
+             }
+         }
         stage('Test') {
             steps {
                 //sh "sudo apt-get install nodejs"
