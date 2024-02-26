@@ -1,0 +1,12 @@
+{
+    "family": "your-task-family",
+    "containerDefinitions": [
+      {
+        "name": "your-container-name",
+        "image": "your-container-image",
+        "cpu": 256,
+        "memory": 512
+      }
+    ]
+  }
+  
