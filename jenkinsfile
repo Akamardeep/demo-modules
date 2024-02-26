@@ -1,16 +1,19 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'docker:20.10.11' // Use a version of Docker compatible with your setup
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
+        }
+    }
     stages {
         stage('Install Node.js') {
-            agent {
-                docker { image 'node:16-alpine' }
-            }
             steps {
-                sh 'apk --no-cache add nodejs npm'
+                script {
+                    sh 'apk --no-cache add nodejs npm'
+                }
             }
         }
         stage('Test') {
-            agent any
             steps {
                 sh 'node --version'
             }
