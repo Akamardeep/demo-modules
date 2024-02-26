@@ -18,5 +18,12 @@ pipeline {
             
             }
         }
+stage('Build-Images') {
+            steps {
+              echo 'building images'
+                sh 'build.sh'
+            
+            }
+        }
     }
 }
