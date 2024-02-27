@@ -21,7 +21,7 @@ pipeline {
 stage('Build-Images') {
             steps {
               echo 'building images'
-                sh './build.sh'
+                sh 'sudo ./build.sh'
             
             }
         }
